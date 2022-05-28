@@ -7,7 +7,7 @@ on:
 
 jobs:
   Snap:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     name: Snap
 
     steps:
@@ -22,11 +22,11 @@ jobs:
 
       - name: Install snapcraft
         run: |
-          sudo snap install snapcraft --classic
+          sudo snap install snapcraft --candidate --classic
 
       - name: Building & Packaging
         run: |
-          snapcraft --debug --destructive-mode
+          sudo snapcraft --verbose --destructive-mode
 
       - name: Installing
         run: |
