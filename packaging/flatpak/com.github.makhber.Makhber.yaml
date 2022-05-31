@@ -84,13 +84,13 @@ modules:
       - --disable-debug
     sources:
       - type: archive
-        url: https://mesa.freedesktop.org/archive/glu/glu-9.0.2.tar.gz
-        sha256: 24effdfb952453cc00e275e1c82ca9787506aba0282145fff054498e60e19a65
+        url: https://ftp.osuosl.org/pub/blfs/conglomeration/glu/glu-9.0.2.tar.xz
+        sha256: 6e7280ff585c6a1d9dfcdf2fca489251634b3377bfc33c29e4002466a38d02d4
         x-checker-data:
           type: anitya
           project-id: 13518
           stable-only: true
-          url-template: https://mesa.freedesktop.org/archive/glu/glu-$version.tar.gz
+          url-template: https://ftp.osuosl.org/pub/blfs/conglomerationglu/glu-$version.tar.xz
     cleanup:
       - /include
       - /lib/*.a
