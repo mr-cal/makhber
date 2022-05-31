@@ -212,6 +212,7 @@ parts:
     prime:
       - -usr/lib/python3/dist-packages/PyQt5/bindings
   pyqt5-sip:
+    source: .
     plugin: python
     python-packages:
       - pyqt5-sip
