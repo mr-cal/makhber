@@ -212,9 +212,12 @@ parts:
     prime:
       - -usr/lib/python3/dist-packages/PyQt5/bindings
   pyqt5-sip:
-    source: .
-    plugin: make
-    build-packages:
-      - python3-pip
-    override-build: |
-      pip3 install pyqt5-sip --target=$CRAFT_PART_INSTALL/usr/lib/python3/dist-packages
+    plugin: python
+    python-packages:
+      - pyqt5-sip
+      - --no-deps
+      - --target=$SNAPCRAFT_PART_INSTALL/usr/lib/python3/dist-packages
+    prime:
+      - -bin/
+      - -lib/
+      - -share/
