@@ -7,7 +7,7 @@ on:
 
 jobs:
   Snap:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     name: Snap
 
     steps:
@@ -23,7 +23,7 @@ jobs:
         id: snap_build
         uses: snapcore/action-build@v1
         with:
-          snapcraft-channel: beta
+          snapcraft-channel: edge
           snapcraft-args: --trace
 
       - name: Upload Snap
