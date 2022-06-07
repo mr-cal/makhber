@@ -21,7 +21,7 @@ jobs:
 
       - name: Building & Packaging
         id: snap_build
-        uses: ./index.js
+        uses: .
         with:
           snapcraft-channel: edge
           snapcraft-args: --trace
