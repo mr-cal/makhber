@@ -16,6 +16,9 @@ jobs:
         with:
           submodules: true
 
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
+
       - name: Building & Packaging
         id: snap_build
         uses: snapcore/action-build@v1
