@@ -3061,10 +3061,9 @@ async function ensureSnapcraft(channel) {
     await exec.exec('sudo', [
         'snap',
         haveSnapcraft ? 'refresh' : 'install',
-        '--channel',
-        channel,
         '--classic',
-        'snapcraft'
+        '--dangerous',
+        './snapcraft_7*.snap'
     ]);
 }
 
