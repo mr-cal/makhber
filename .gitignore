@@ -3,7 +3,6 @@ build/
 CMakeLists.txt.user*
 .vscode/
 CMakeUserPresets.json
-*.snap
 parts/*
 stage/*
 prime/*

@@ -3061,9 +3061,10 @@ async function ensureSnapcraft(channel) {
     await exec.exec('sudo', [
         'snap',
         haveSnapcraft ? 'refresh' : 'install',
+        '--channel',
+        channel,
         '--classic',
-        '--dangerous',
-        '/home/runner/snapcraft_7*.snap'
+        'snapcraft'
     ]);
 }
 
@@ -3115,7 +3116,7 @@ class SnapcraftBuilder {
         if (this.uaToken) {
             snapcraft = `${snapcraft} --ua-token ${this.uaToken}`;
         }
-        await exec.exec('sg', ['lxd', '-c', snapcraft], {
+        await exec.exec('script', ['-q', '-e', '-c', 'bash', 'sg', 'lxd', '-c', snapcraft], {
             cwd: this.projectRoot,
             env
         });
