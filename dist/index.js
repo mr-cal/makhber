@@ -3063,7 +3063,7 @@ async function ensureSnapcraft(channel) {
         haveSnapcraft ? 'refresh' : 'install',
         '--classic',
         '--dangerous',
-        './snapcraft_7*.snap'
+        '/home/runner/work/makhber/makhber/snapcraft_7.0.2.post19+gita8a3f2e1_amd64.snap'
     ]);
 }
 
