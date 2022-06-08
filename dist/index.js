@@ -3115,7 +3115,7 @@ class SnapcraftBuilder {
         if (this.uaToken) {
             snapcraft = `${snapcraft} --ua-token ${this.uaToken}`;
         }
-        await exec.exec('script', ['-q', '-e', '-c', 'bash', 'sg', 'lxd', '-c', snapcraft], {
+        await exec.exec('sg lxd -c "script -q -e -c \'SNAPCRAFT_BUILD_ENVIRONMENT=lxd snapcraft --trace\'"', {
             cwd: this.projectRoot,
             env
         });
